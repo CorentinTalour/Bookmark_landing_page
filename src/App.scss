@@ -1,0 +1,8 @@
+main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+  margin: auto;
+  background-color: var(--background);
+  transition: background-color 250ms ease-in-out;
+}

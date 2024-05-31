@@ -1,0 +1,80 @@
+.featuresSection {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 48%;
+    height: 47%;
+    width: 35%;
+    border-radius: 0 130px 130px 0;
+    background-color: var(--bg-join);
+    z-index: 0;
+    transition: background-color 0.4s;
+  }
+
+  .featuresContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    max-width: 1440px;
+    margin: auto;
+
+    .featuresP {
+      max-width: 540px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .selector {
+      display: flex;
+      margin-bottom: 30px;
+      max-width: 750px;
+      border-bottom: 1px solid var(--grayish-blue);
+
+      .oneSelector {
+        display: flex;
+        //align-items: center;
+        cursor: pointer;
+        gap: 50rem;
+
+        p {
+          margin: auto;
+          padding: 20px 40px;
+        }
+
+        .active {
+          color: var(--very-dark-blue-t);
+          bottom: 0;
+          border-bottom: 3px solid var(--soft-red);
+        }
+      }
+    }
+
+    .selectorContent {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+
+      .selectorContentLeft {
+        min-width: 650px;
+        min-height: 478px;
+        z-index: 1;
+
+      }
+
+      .selectorContentRight {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        p {
+          width: 60%;
+        }
+
+      }
+    }
+  }
+}

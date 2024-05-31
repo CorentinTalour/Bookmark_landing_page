@@ -1,0 +1,67 @@
+:root {
+  //fonts
+  font-family: "Rubik", sans-serif;
+
+  //Shadow
+  --shadow-card: 4px 8px 12px rgba(0, 0, 0, .3);
+
+  //colors
+  //Text
+  --p: #5e616e;
+  --a-nav: hsl(229, 31%, 21%);
+  --soft-blue-t: hsl(231, 69%, 60%);
+  --very-dark-blue-t: hsl(229, 31%, 21%);
+  --t-btn-secondary: #252b46;
+  --t-btn-secondary-hover: #f6f7f2;
+  --t-btn-dark-mode: black;
+  --t-btn-dark-mode-hover: white;
+
+  //Background
+  --soft-blue-b: hsl(231, 69%, 60%);
+  --very-dark-blue-b: hsl(229, 31%, 21%);
+  --very-dark-blue-footer-b: hsl(229, 31%, 21%);
+  --bg-btn-primary: white;
+  --bg-btn-secondary: #F7F7F7;
+  --bg-btn-secondary-hover: hsl(229, 31%, 21%);
+  --bg-btn-dark-mode: #f6f7f2;
+  --bg-btn-dark-mode-hover: hsl(229, 31%, 21%);
+  --bg-card: white;
+  --bg-join: hsl(231, 69%, 60%);
+  --background: white;
+
+  //Other
+  --soft-red: hsl(0, 94%, 66%);
+  --grayish-blue: hsl(229, 8%, 60%);
+  --gray: #F7F7F7;
+
+  //Dark Theme
+  [data-theme="dark"] {
+    //Text
+    --p: #5e616e;
+    --a-nav: white;
+    --soft-blue-t: #252b46;
+    --very-dark-blue-t: #b9bfda;
+    --t-btn-secondary: #f6f7f2;
+    --t-btn-secondary-hover: #0c0d08;
+    --t-btn-dark-mode: white;
+    --t-btn-dark-mode-hover: black;
+
+    //Background
+    --soft-blue-b: #252b46;
+    --very-dark-blue-b: white;
+    --very-dark-blue-footer: #252b46;
+    --bg-btn-primary: hsl(229, 8%, 60%);
+    --bg-btn-secondary: #0c0d08;
+    --bg-btn-secondary-hover: #b9bfda;
+    --bg-btn-dark-mode: black;
+    --bg-btn-dark-mode-hover: #b9bfda;
+    --bg-card: #1a1a1a;
+    --bg-join: #252b46;
+    --background: black;
+
+    //Other
+    --soft-red: hsl(0, 94%, 66%);
+    --grayish-blue: hsl(229, 8%, 60%);
+    --gray: #F7F7F7;
+  }
+}

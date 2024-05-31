@@ -1,0 +1,51 @@
+.bookmarkManagerSection {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 25%;
+    height: 80%;
+    width: 37%;
+    border-radius: 130px 0 0 130px;
+    background-color: var(--bg-join);
+    transition: background-color 0.4s;
+  }
+
+  .bookmarkManagerContainer {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+    max-width: 1440px;
+    margin: auto;
+
+    .bookmarkManagerLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      p {
+        width: 75%;
+        line-height: 2.5rem;
+      }
+
+      .bookmarkManagerContainerBtn {
+        button {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+
+  .bookmarkManagerRight {
+    position: relative;
+
+    .bookmarkManagerSquare::before {
+
+    }
+  }
+
+
+}

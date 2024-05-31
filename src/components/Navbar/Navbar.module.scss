@@ -1,0 +1,23 @@
+header {
+  //position: fixed;
+  margin: 40px 0;
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+
+    .headerLeft {
+      display: flex;
+      transition: fill 0.4s;
+    }
+
+    .headerRight {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      gap: 3rem;
+    }
+  }
+}

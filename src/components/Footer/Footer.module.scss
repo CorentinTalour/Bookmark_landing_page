@@ -1,0 +1,41 @@
+.footerSection {
+  background-color: var(--very-dark-blue-footer-b);
+  transition: background-color 0.4s;
+
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    max-width: 1440px;
+    margin: auto;
+
+    .footerNav {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        color: white;
+
+        &:hover {
+          color: var(--soft-red);
+        }
+      }
+    }
+
+    .socialLinks {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      cursor: pointer;
+
+      transition: 0.3s;
+
+      path {
+        &:hover {
+          fill: var(--soft-red);
+        }
+      }
+    }
+  }
+}

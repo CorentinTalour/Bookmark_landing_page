@@ -1,0 +1,11 @@
+@mixin phone {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 321px) and (max-width: 768px) {
+    @content;
+  }
+}

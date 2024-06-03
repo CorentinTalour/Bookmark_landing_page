@@ -1,7 +1,6 @@
 import "./Navbar.module.scss";
 import styles from "./Navbar.module.scss";
 import ToggleDarkMode from "../ToggleDarkMode/ToggleDarkMode.jsx";
-import useLocalStorage from "use-local-storage";
 import {useState} from "react";
 
 function Navbar({isDark, setDark}) {

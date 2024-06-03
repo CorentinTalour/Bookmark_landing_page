@@ -1,6 +1,8 @@
 import styles from "./Extension.module.scss"
 
 function Extension() {
+    const dotsSvg = new URL('../../../public/images/bg-dots.svg', import.meta.url).href;
+
     return (
         <section className={`${styles.extensionSection}`}>
             <h2>Download the extension</h2>
@@ -26,7 +28,7 @@ function Extension() {
                     </svg>
                     <h3>Add to Chrome</h3>
                     <p>Minimum version 62</p>
-                    <img src="/images/bg-dots.svg" alt="dots"/>
+                    <img src={dotsSvg} alt="dots"/>
                     <button className={"btn-primary"}>Add & Install Extension</button>
                 </div>
                 <div className={`${styles.card}`}>
@@ -36,7 +38,7 @@ function Extension() {
                     </svg>
                     <h3>Add to Firefox</h3>
                     <p>Minimum version 55</p>
-                    <img src="/images/bg-dots.svg" alt="dots"/>
+                    <img src={dotsSvg} alt="dots"/>
                     <button className={"btn-primary"}>Add & Install Extension</button>
                 </div>
                 <div className={`${styles.card}`}>
@@ -46,7 +48,7 @@ function Extension() {
                     </svg>
                     <h3>Add to Opera</h3>
                     <p>Minimum version 46</p>
-                    <img src="/images/bg-dots.svg" alt="dots"/>
+                    <img src={dotsSvg} alt="dots"/>
                     <button className={"btn-primary"}>Add & Install Extension</button>
                 </div>
             </div>

@@ -6,11 +6,6 @@ import {useState} from "react";
 function Navbar({isDark, setDark}) {
     const [navOpen, setNavOpen] = useState(false);
 
-    function test() {
-        setNavOpen(!navOpen);
-        console.log(navOpen);
-    }
-
     return (
         <header>
             <nav className={`${styles.headerContainer}`}>
@@ -29,7 +24,7 @@ function Navbar({isDark, setDark}) {
                                 </g>
                             </g>
                         </svg>
-                        <li onClick={test}>
+                        <li onClick={() => setNavOpen(!navOpen)}>
                             {navOpen ?
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
                                     <path fill="#FFF" fillRule="evenodd"

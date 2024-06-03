@@ -46,7 +46,7 @@
           margin-right: 2rem;
 
           @include mixin.tablet {
-            padding: 1rem 1rem
+            padding: 1rem min(2vw, 2rem)
           }
         }
       }

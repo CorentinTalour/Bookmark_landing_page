@@ -9,6 +9,13 @@ function Features() {
 
     const {name, title, description, image, button} = info[value];
 
+    // const basePrefix = "Bookmark_landing_page";
+    // const mySvg = new URL(`/${basePrefix}${image}`, import.meta.url).href;
+    // const mySvg = new URL(image, import.meta.url).href;
+
+    // Générer le chemin complet de l'image en tenant compte de la base URL et du préfixe
+    const mySvg = `${import.meta.env.BASE_URL}${image}`;
+
     return (
         <section className={`${styles.featuresSection}`}>
             <div className={`${styles.featuresContainer}`}>
@@ -29,7 +36,7 @@ function Features() {
                 </div>
                 <div className={`${styles.selectorContent}`}>
                     <div className={`${styles.selectorContentLeft}`}>
-                        <img src={image} alt={name}/>
+                        <img src={mySvg} alt={name}/>
                         <div className={styles.featuresSquare}></div>
                     </div>
                     <div className={`${styles.selectorContentRight}`}>

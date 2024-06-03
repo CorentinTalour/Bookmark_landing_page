@@ -3,6 +3,7 @@ import {useState} from "react";
 
 function Faq() {
 
+    // eslint-disable-next-line no-unused-vars
     const [faqs, setFaqs] = useState([
         {
             question: "What is Bookmark?",
@@ -59,7 +60,7 @@ function Faq() {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"
                                      className={`${styles.svgArrow}  ${selected === i ? styles.turn : ""}`}>
                                     <path fill="none" stroke={`${selected === i ? "var(--soft-red)" : "#5267DF"}`}
-                                          stroke-width="3" d="M1 1l8 8 8-8"/>
+                                          strokeWidth="3" d="M1 1l8 8 8-8"/>
                                 </svg>
                             </div>
                             <div

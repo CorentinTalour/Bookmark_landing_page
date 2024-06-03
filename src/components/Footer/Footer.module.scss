@@ -23,10 +23,12 @@
 
       @include mixin.tablet {
         flex-direction: column;
+        align-items: center;
       }
 
       a {
         color: white;
+        text-align: center;
 
         &:hover {
           color: var(--soft-red);

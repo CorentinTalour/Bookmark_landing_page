@@ -4,8 +4,7 @@ import ToggleDarkMode from "../ToggleDarkMode/ToggleDarkMode.jsx";
 import useLocalStorage from "use-local-storage";
 import {useState} from "react";
 
-function Navbar() {
-    const [isDark, setDark] = useLocalStorage("isDark", false);
+function Navbar({isDark, setDark}) {
     const [navOpen, setNavOpen] = useState(false);
 
     function test() {

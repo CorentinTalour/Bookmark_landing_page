@@ -15,6 +15,7 @@ function App() {
         <main data-theme={isDark ? "dark" : "light"}>
             <Navbar
                 isDark={isDark}
+                setDark={setDark}
             />
             <BookmarkManager/>
             <Features/>

@@ -1,6 +1,7 @@
 import styles from "./BookmarkManager.module.scss"
 
 function BookmarkManager() {
+    const MySvg = new URL('../../../public/images/illustration-hero.svg', import.meta.url).href;
     return (
         <section className={`${styles.bookmarkManagerSection}`}>
             <div className={`${styles.bookmarkManagerContainer}`}>
@@ -16,7 +17,7 @@ function BookmarkManager() {
                     </div>
                 </div>
                 <div className={`${styles.bookmarkManagerRight}`}>
-                    <img src="/images/illustration-hero.svg" alt="Illustration Features Tab"/>
+                    <img src={MySvg} alt="Illustration Features Tab"/>
                     <div className={`${styles.bookmarkManagerSquare}`}></div>
                 </div>
             </div>

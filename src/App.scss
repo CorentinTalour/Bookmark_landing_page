@@ -1,3 +1,5 @@
+@use "scss/mixins" as mixin;
+
 main {
   display: flex;
   flex-direction: column;
@@ -5,4 +7,8 @@ main {
   margin: auto;
   background-color: var(--background);
   transition: background-color 250ms ease-in-out;
+
+  @include mixin.tablet {
+    row-gap: 14rem;
+  }
 }

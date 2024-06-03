@@ -16,9 +16,8 @@ function BookmarkManager() {
                     </div>
                 </div>
                 <div className={`${styles.bookmarkManagerRight}`}>
-                    <div className={`${styles.bookmarkManagerSquare}`}>
-                        <img src="/images/illustration-hero.svg" alt="Illustration Features Tab"/>
-                    </div>
+                    <img src="/images/illustration-hero.svg" alt="Illustration Features Tab"/>
+                    <div className={`${styles.bookmarkManagerSquare}`}></div>
                 </div>
             </div>
         </section>

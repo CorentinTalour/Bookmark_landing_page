@@ -1,18 +1,9 @@
+@use "../../scss/mixins" as mixin;
+
 .featuresSection {
   position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 48%;
-    height: 47%;
-    width: 35%;
-    border-radius: 0 130px 130px 0;
-    background-color: var(--bg-join);
-    z-index: 0;
-    transition: background-color 0.4s;
-  }
+  width: 90%;
+  margin: auto;
 
   .featuresContainer {
     display: flex;
@@ -22,10 +13,23 @@
     max-width: 1440px;
     margin: auto;
 
+    @include mixin.tablet {
+      max-width: 90%;
+      align-items: initial;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
     .featuresP {
       max-width: 540px;
       text-align: center;
       margin-bottom: 30px;
+
+      @include mixin.tablet {
+        max-width: 100%;
+      }
     }
 
     .selector {
@@ -34,11 +38,20 @@
       max-width: 750px;
       border-bottom: 1px solid var(--grayish-blue);
 
+      @include mixin.tablet {
+        max-width: 100%;
+        flex-direction: column;
+      }
+
       .oneSelector {
         display: flex;
         //align-items: center;
         cursor: pointer;
         gap: 50rem;
+
+        @include mixin.tablet {
+          border-top: 1px solid var(--grayish-blue);
+        }
 
         p {
           margin: auto;
@@ -56,23 +69,88 @@
     .selectorContent {
       display: flex;
       align-items: center;
-      gap: 5rem;
+      //gap: 5rem;
+
+      @include mixin.tablet {
+        flex-direction: column;
+        //margin-top: 10px;
+        row-gap: 5rem;
+      }
 
       .selectorContentLeft {
-        min-width: 650px;
-        min-height: 478px;
+        min-width: 700px;
+        min-height: 550px;
         z-index: 1;
+        flex-direction: column;
+        flex: 1;
 
+        @include mixin.tablet {
+          flex: initial;
+          min-height: initial;
+          min-width: initial;
+        }
+
+        img {
+          position: relative;
+          max-width: 100%;
+          z-index: 2;
+        }
+
+        .featuresSquare {
+
+          &::before {
+            position: absolute;
+            content: "";
+            left: -10%;
+            top: 36%;
+            height: 47%;
+            width: calc(36% + 10vw); /* Adjust width based on viewport width */
+            border-radius: 0 130px 130px 0;
+            background-color: var(--bg-join);
+            z-index: 1;
+            transition: background-color 0.4s;
+
+            @include mixin.tablet {
+              top: 48%;
+              height: calc(14% + 25vw);
+              width: calc(60% + 20vw); /* Adjust width based on viewport width */
+            }
+          }
+        }
       }
 
       .selectorContentRight {
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
+        flex: 1;
+
+        @include mixin.tablet {
+          flex: initial;
+
+          div {
+            display: flex;
+            justify-content: center;
+          }
+        }
+
+        h2 {
+          text-align: left;
+
+          @include mixin.tablet {
+            text-align: center;
+          }
+        }
 
         p {
-          width: 60%;
+          max-width: min(20vw, 400px);
+
+          @include mixin.tablet {
+            text-align: center;
+            max-width: 100%;
+          }
         }
+
 
       }
     }

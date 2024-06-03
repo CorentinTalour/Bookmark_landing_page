@@ -1,51 +1,86 @@
+@use "../../scss/mixins" as mixin;
+
 .bookmarkManagerSection {
   position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 25%;
-    height: 80%;
-    width: 37%;
-    border-radius: 130px 0 0 130px;
-    background-color: var(--bg-join);
-    transition: background-color 0.4s;
-  }
+  width: 90%;
+  margin: auto;
 
   .bookmarkManagerContainer {
     display: flex;
     align-items: center;
-    gap: 9rem;
     max-width: 1440px;
     margin: auto;
 
+    @include mixin.tablet {
+      flex-direction: column-reverse;
+      width: 90%;
+      row-gap: 10rem;
+
+      h1 {
+        text-align: center;
+      }
+    }
+
     .bookmarkManagerLeft {
       display: flex;
+      flex: 1;
       flex-direction: column;
+      //max-width: 48%;
       gap: 2rem;
+
+      @include mixin.tablet {
+        align-items: center;
+      }
 
       p {
         width: 75%;
         line-height: 2.5rem;
+
+        @include mixin.tablet {
+          text-align: center;
+        }
       }
 
       .bookmarkManagerContainerBtn {
         button {
           margin-right: 2rem;
+
+          @include mixin.tablet {
+            padding: 1rem 1.5rem
+          }
         }
       }
     }
   }
 
-
   .bookmarkManagerRight {
-    position: relative;
+    z-index: 1;
+    flex: 1.5;
 
-    .bookmarkManagerSquare::before {
+    img {
+      position: relative;
+      max-width: 100%;
+      z-index: 2;
+    }
 
+    .bookmarkManagerSquare {
+      &:before {
+        position: absolute;
+        content: "";
+        right: -10%;
+        top: 31%;
+        height: 69%;
+        width: calc(48% + 8vw); /* Adjust width based on viewport width */
+        border-radius: 130px 0 0 130px;
+        background-color: var(--bg-join);
+        transition: background-color 0.4s;
+
+        @include mixin.tablet {
+          top: 14%;
+          height: calc(-12% + 55vw);
+          width: 86%;
+        }
+      }
     }
   }
-
-
 }

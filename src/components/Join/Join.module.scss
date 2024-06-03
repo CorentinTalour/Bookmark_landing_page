@@ -1,3 +1,5 @@
+@use "../../scss/mixins" as mixin;
+
 .joinSection {
   display: flex;
   flex-direction: column;
@@ -19,11 +21,28 @@
   }
 
   div {
+    @include mixin.tablet {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      margin: auto;
+      width: 90%;
+    }
+
     input {
+      @include mixin.tablet {
+        width: 100%;
+      }
     }
 
     button {
       margin-left: 10px;
+
+      @include mixin.tablet {
+        width: 100%;
+        margin-left: 0;
+
+      }
     }
   }
 }

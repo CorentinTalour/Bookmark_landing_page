@@ -1,3 +1,5 @@
+@use "../../scss/mixins" as mixin;
+
 .extensionSection {
   display: flex;
   flex-direction: column;
@@ -5,9 +7,22 @@
   row-gap: 2rem;
   margin-bottom: 6rem;
 
+  @include mixin.tablet {
+    max-width: 90%;
+    margin: auto;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
   .extensionP {
     width: 38%;
     text-align: center;
+
+    @include mixin.tablet {
+      width: 100%;
+    }
   }
 
   .cardContainer {
@@ -16,6 +31,12 @@
     align-items: center;
     gap: 5rem;
     height: 380px;
+
+    @include mixin.tablet {
+      flex-direction: column;
+      gap: 5rem;
+      height: initial;
+    }
 
     .card {
       display: flex;
@@ -29,10 +50,18 @@
 
       &:nth-child(1) {
         transform: translateY(-35px);
+
+        @include mixin.tablet {
+          transform: translateY(0);
+        }
       }
 
       &:nth-child(3) {
         transform: translateY(35px);
+
+        @include mixin.tablet {
+          transform: translateY(0);
+        }
       }
 
       p {

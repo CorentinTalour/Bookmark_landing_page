@@ -30,6 +30,7 @@ function Features() {
                 <div className={`${styles.selectorContent}`}>
                     <div className={`${styles.selectorContentLeft}`}>
                         <img src={image} alt={name}/>
+                        <div className={styles.featuresSquare}></div>
                     </div>
                     <div className={`${styles.selectorContentRight}`}>
                         <h2>{title}</h2>
